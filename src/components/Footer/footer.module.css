@@ -55,6 +55,7 @@
 
 .col ul li {
    margin-bottom: 15px;
+   list-style: none;
 }
 
 .blockInfo__timetable {
@@ -65,7 +66,7 @@
 
 /* screen 768px */
 @media (max-width: 768px){
-   .footerRow {
+   .row {
       flex-direction: row;
       flex-wrap: wrap;
    }
@@ -73,7 +74,7 @@
 
 /* screen 500px */
 @media (max-width: 500px){
-   .footerRow {
+   .row {
       flex-direction: column;
    }
    .col:nth-child(2) {
