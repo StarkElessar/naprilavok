@@ -1,6 +1,6 @@
 import React from 'react';
 // import { NavLink } from 'react-router-dom';
-import mainBtn from './MainBtn.module.css';
+import mainBtn from './style.css';
 
 const MainBtn = (props) => {
    return (

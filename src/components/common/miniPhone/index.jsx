@@ -1,5 +1,5 @@
 import React from 'react';
-import phoneModal from './PhoneLink.module.css';
+import phoneModal from './style.css';
 import { NavLink } from 'react-router-dom';
 
 const PhoneLink = () => {
