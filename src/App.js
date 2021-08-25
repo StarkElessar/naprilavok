@@ -10,7 +10,7 @@ import Mowers from './components/page/Mowers';
 import Chainsaw from './components/page/Chainsaw';
 import WeldingMachine from './components/page/WaldingMachine';
 import Showers from './components/page/Showers';
-import PhoneLink from './components/common/mini-phone';
+import PhoneLink from './components/common/miniPhone';
 
 const App = () => {
   return (
