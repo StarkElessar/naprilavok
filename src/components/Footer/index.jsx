@@ -22,13 +22,7 @@ const Footer = (props) => {
             <div className={footer.col}>
                <h5>Полезные ссылки:</h5>
                <ul>
-                  <li><NavLink to='/catalog' activeClassName={footer.activeLink}>Главный каталог</NavLink></li>
-                  <li><NavLink to='/greenhouses' activeClassName={footer.activeLink}>Теплицы</NavLink></li>
-                  <li><NavLink to='/pavilion' activeClassName={footer.activeLink}>Беседки</NavLink></li>
-                  <li><NavLink to='/mowers' activeClassName={footer.activeLink}>Бензокосы</NavLink></li>
-                  <li><NavLink to='/chainsaw' activeClassName={footer.activeLink}>Бензопилы</NavLink></li>
-                  <li><NavLink to='/welding_machine' activeClassName={footer.activeLink}>Сварочные аппараты</NavLink></li>
-                  <li><NavLink to='/showers' activeClassName={footer.activeLink}>Летние души</NavLink></li>
+                  { linkData.map(( {url, title} ) => <MenuLink url={url} title={title} /> ) }
                </ul>
             </div>
             <div className={footer.col}>
@@ -44,5 +38,21 @@ const Footer = (props) => {
       </footer>
    )
 };
+
+const MenuLink = ({ url, title }) => {
+   return (
+      <li><NavLink to={url} activeClassName={footer.activeLink}>{title}</NavLink></li>
+   );
+};
+
+const linkData = [
+   { url: "/catalog", title: "Главный каталог" },
+   { url: "/greenhouses", title: "Теплицы" },
+   { url: "/pavilion", title: "Беседки" },
+   { url: "/mowers", title: "Бензокосы" },
+   { url: "/chainsaw", title: "Бензопилы" },
+   { url: "/welding_machine", title: "Сварочные аппараты" },
+   { url: "/showers", title: "Летние души" }
+]
 
 export default Footer;

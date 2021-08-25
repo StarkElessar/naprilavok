@@ -17,7 +17,7 @@ const Catalog = (props) => {
 
          <div className={productCategories.items}>
 
-            {cardData.map( ({ imgSrc, title, url }) => <CatalogCard imgSrc={imgSrc} title={title} url={url} />)}
+            { cardData.map( ({ imgSrc, title, url }) => <CatalogCard imgSrc={imgSrc} title={title} url={url} />) }
 
          </div>
 
