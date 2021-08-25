@@ -8,7 +8,7 @@ import chainsaw from './img/product-card/chainsaw.jpg';
 import welding from './img/product-card/welding-machine.jpg';
 import showers from './img/product-card/showers.jpg';
 
-const MainPageCatalog = (props) => {
+const Catalog = (props) => {
    return (
       <div className={productCategories.wrapper}>
          
@@ -71,4 +71,4 @@ const MainPageCatalog = (props) => {
    )
 }
 
-export default MainPageCatalog;
+export default Catalog;
