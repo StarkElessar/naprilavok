@@ -1,21 +1,21 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import app from './App.module.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Catalog from './components/Catalog';
-import Greenhouses from './components/Greenhouses/Greenhouses';
-import Pavilion from './components/Pavilion/Pavilion';
-import Mowers from './components/Mowers/Mowers';
-import Chainsaw from './components/Chainsaw/Chainsaw';
-import WeldingMachine from './components/WaldingMachine/WeldingMachine';
-import Showers from './components/Showers/Showers';
+import Greenhouses from './components/Greenhouses';
+import Pavilion from './components/Pavilion';
+import Mowers from './components/Mowers';
+import Chainsaw from './components/Chainsaw';
+import WeldingMachine from './components/WaldingMachine';
+import Showers from './components/Showers';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <div className="appContent__wrapper">
+      <div className="content__wrapper">
         <Route exact path='/' component={Catalog} />
         <Route exact path='/catalog' component={Catalog} />
         <Route exact path='/greenhouses' component={Greenhouses} />

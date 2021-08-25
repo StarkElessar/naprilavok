@@ -17,58 +17,33 @@ const Catalog = (props) => {
 
          <div className={productCategories.items}>
 
-            <div className={productCategories.item}>
-               <img src={green} alt="Greenhouses"/>
-               <div className={productCategories.item__body}>
-                  <NavLink to='/greenhouses'>Теплицы</NavLink>
-                  <NavLink to='/greenhouses' className={productCategories.item__button}>Перейти</NavLink>
-               </div>
-            </div>
-               
-            <div className={productCategories.item}>
-               <img src={pavilion} alt="Pavilion"/>
-                  <div className={productCategories.item__body}>
-                  <NavLink to='/pavilion'>Беседки</NavLink>
-                  <NavLink to='/pavilion' className={productCategories.item__button}>Перейти</NavLink>
-                  </div>
-            </div>
-                  
-            <div className={productCategories.item}>
-               <img src={mowers} alt="Mowers"/>
-                  <div className={productCategories.item__body}>
-                  <NavLink to='/mowers'>Бензокосы</NavLink>
-                  <NavLink to='/mowers' className={productCategories.item__button}>Перейти</NavLink>
-                  </div>
-            </div>
-                     
-            <div className={productCategories.item}>
-               <img src={chainsaw} alt="Chainsaw"/>
-                  <div className={productCategories.item__body}>
-                  <NavLink to='/chainsaw'>Бензопилы</NavLink>
-                  <NavLink to='/chainsaw' className={productCategories.item__button}>Перейти</NavLink>
-                  </div>
-            </div>
-                        
-            <div className={productCategories.item}>
-               <img src={welding} alt="Welding-mashine"/>
-               <div className={productCategories.item__body}>
-                  <NavLink to='/welding_machine'>Сварочные аппараты</NavLink>
-                  <NavLink to='/welding_machine' className={productCategories.item__button}>Перейти</NavLink>
-               </div>
-            </div>
-                           
-            <div className={productCategories.item}>
-               <img src={showers} alt="Showers"/>
-               <div className={productCategories.item__body}>
-                  <NavLink to='/showers'>Летние души</NavLink>
-                  <NavLink to='/showers' className={productCategories.item__button}>Перейти</NavLink>
-               </div>
-            </div>
-                              
+            {cardData.map( ({ imgSrc, title, url }) => <CatalogCard imgSrc={imgSrc} title={title} url={url} />)}
+
          </div>
 
       </div>
    )
 }
+
+const CatalogCard = ({ imgSrc, title, url }) => {
+   return (
+      <div className={productCategories.item}>
+         <img src={imgSrc} alt="Showers" />
+         <div className={productCategories.item__body}>
+            <NavLink to={url}>{title}</NavLink>
+            <NavLink to={url} className={productCategories.item__button}>Перейти</NavLink>
+         </div>
+      </div>
+   )
+}
+
+const cardData = [
+   { imgSrc: green, title: "Теплицы", url: "/greenhouses" },
+   { imgSrc: pavilion, title: "Беседки", url: "/pavilion" },
+   { imgSrc: mowers, title: "Бензокосы", url: "/mowers" },
+   { imgSrc: chainsaw, title: "Бензопилы", url: "/chainsaw" },
+   { imgSrc: welding, title: "Сварочные аппараты", url: "/welding" },
+   { imgSrc: showers, title: "Летние души", url: "/showers" }
+]
 
 export default Catalog;
