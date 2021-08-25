@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styles.module.css';
+import catalog from './style.module.css';
 import { NavLink } from 'react-router-dom';
 import green from './img/product-card/greenhouses.jpg';
 import pavilion from './img/product-card/pavilion.jpg';
@@ -19,32 +19,32 @@ const cardData = [
 ];
 
 const Catalog = (props) => {
-   return (
-      <main className={styles.wrapper}>
-         <h1>Интернет магазин садовой и строительной техники</h1>
-         <h2>Бесплатная доставка по всей территории Республики Беларусь</h2>
-         <div className={styles.items}>
-            {
-              cardData.map(
-                ({ imgSrc, title, url }) => <CatalogCard imgSrc={imgSrc} title={title} url={url} />
-              )
-            }
-         </div>
-         <PromoForm />
-      </main>
-   );
+  return (
+    <main className={catalog.wrapper}>
+      <h1>Интернет магазин садовой и строительной техники</h1>
+      <h2>Бесплатная доставка по всей территории Республики Беларусь</h2>
+      <div className={catalog.items}>
+        {
+          cardData.map(
+            ({ imgSrc, title, url }) => <CatalogCard imgSrc={imgSrc} title={title} url={url} />
+          )
+        }
+      </div>
+      <PromoForm />
+    </main>
+  );
 };
 
 const CatalogCard = ({ imgSrc, title, url }) => {
-   return (
-      <div className={styles.item}>
-         <img src={imgSrc} alt="Showers" />
-         <div className={styles.item__body}>
-            <NavLink to={url}>{title}</NavLink>
-            <NavLink to={url} className={styles.item__button}>Перейти</NavLink>
-         </div>
+  return (
+    <div className={catalog.item}>
+      <img src={imgSrc} alt="Showers" />
+      <div className={catalog.item__body}>
+        <NavLink to={url}>{title}</NavLink>
+        <NavLink to={url} className={catalog.item__button}>Перейти</NavLink>
       </div>
-   );
+    </div>
+  );
 };
 
 export default Catalog;
