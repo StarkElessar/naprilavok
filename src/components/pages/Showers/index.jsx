@@ -1,5 +1,5 @@
 import React from 'react';
-import showersPage from './Showers.module.css';
+import showersPage from './style.css';
 
 const Showers = (props) => {
    return (

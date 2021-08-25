@@ -1,5 +1,5 @@
 import React from 'react';
-import weldingPage from './WeldingMachine.module.css';
+import weldingPage from './style.css';
 // import { NavLink } from 'react-router-dom';
 
 const WeldingMachine = (props) => {

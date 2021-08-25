@@ -1,5 +1,5 @@
 import React from 'react';
-import mowersPage from './Mowers.module.css';
+import mowersPage from './style.css';
 // import { NavLink } from 'react-router-dom';
 
 const Mowers = (props) => {

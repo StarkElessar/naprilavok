@@ -1,5 +1,5 @@
 import React from 'react';
-import pavilionPage from './Pavilion.module.css';
+import pavilionPage from './style.css';
 
 const Pavilion = (props) => {
    return (

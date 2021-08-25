@@ -1,5 +1,5 @@
 import React from 'react';
-import chainsawPage from './Chainsaw.module.css';
+import chainsawPage from './style.css';
 // import { NavLink } from 'react-router-dom';
 
 const Chainsaw = (props) => {

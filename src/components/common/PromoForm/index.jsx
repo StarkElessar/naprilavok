@@ -1,6 +1,6 @@
 import React from 'react';
 import promoForm from './style.css';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import MainForm from './../collection-forms/main-form';
 
 const PromoForm = () => {

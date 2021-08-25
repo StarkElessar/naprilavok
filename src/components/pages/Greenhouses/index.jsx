@@ -1,5 +1,5 @@
 import React from 'react';
-import greenhousesPage from './Greenhouses.module.css';
+import greenhousesPage from './style.css';
 // import { NavLink } from 'react-router-dom';
 
 const Greenhouses = (props) => {
