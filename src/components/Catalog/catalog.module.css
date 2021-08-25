@@ -95,10 +95,11 @@
 .item__body a:nth-child(1) {
    position: absolute;
    transform: translateY(-50%);
-   font-size: 2.5rem;
+   font-size: 2.2rem;
    font-weight: 800;
    letter-spacing: 0.15rem;
    transition: var(--main-transition);
+   line-height: 85%;
    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
 .item__body a:nth-child(1):hover {
