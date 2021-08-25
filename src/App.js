@@ -10,6 +10,7 @@ import Mowers from './components/Mowers';
 import Chainsaw from './components/Chainsaw';
 import WeldingMachine from './components/WaldingMachine';
 import Showers from './components/Showers';
+import PhoneLink from './components/mini-phone';
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path='/showers' component={Showers} />
       </div>
       <Footer />
+      <PhoneLink />
     </BrowserRouter>
   );
 };
