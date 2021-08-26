@@ -1,31 +1,21 @@
 import React from 'react';
-import footer from './style.module.css';
+import styles from './style.module.css';
 import { NavLink } from 'react-router-dom';
 
-const Footer = (props) => {
-  
-  const MenuLink = ({ url, title }) => {
-    return (
-      <li><NavLink to={url} activeClassName={footer.activeLink}>{title}</NavLink></li>
-    );
-  };
+const MenuLink = ({ url, title }) => {
+  return (
+    <li><NavLink to={url} activeClassName={styles.activeLink}>{title}</NavLink></li>
+  );
+};
 
-  const linkData = [
-    { url: "/catalog", title: "Главный каталог" },
-    { url: "/greenhouses", title: "Теплицы" },
-    { url: "/pavilion", title: "Беседки" },
-    { url: "/mowers", title: "Бензокосы" },
-    { url: "/chainsaw", title: "Бензопилы" },
-    { url: "/welding_machine", title: "Сварочные аппараты" },
-    { url: "/showers", title: "Летние души" }
-  ]
+const Footer = ({footer: {linkData}}) => {
   
   return (
-    <footer className={footer.wrapper}>
+    <footer className={styles.wrapper}>
 
-      <div className={footer.row}>
+      <div className={styles.row}>
 
-        <div className={footer.col}>
+        <div className={styles.col}>
           <h5>ИП Коробкин О.Е.</h5>
           <h5>УНП: 192693197</h5>
           <a href="https://yandex.by/maps/-/CCUeJOuxKA">
@@ -36,18 +26,18 @@ const Footer = (props) => {
             г. Минск, ул. Медвежино 10
           </a>
         </div>
-        <div className={footer.col}>
+        <div className={styles.col}>
           <h5>Полезные ссылки:</h5>
           <ul>
             {linkData.map(({ url, title }) => <MenuLink url={url} title={title} />)}
           </ul>
         </div>
-        <div className={footer.col}>
+        <div className={styles.col}>
           <a href="tel:+375255228110" className="">
             +375 (25) 522-81-10
           </a>
           <a href="mailto:feedback-mail@naprilavok.by">feedback-mail@naprilavok.by</a>
-          <p className={footer.blockInfo__timetable}>Мы работаем с 8:30 до 23:00</p>
+          <p className={styles.blockInfo__timetable}>Мы работаем с 8:30 до 23:00</p>
         </div>
 
       </div>
