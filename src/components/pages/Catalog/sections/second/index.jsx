@@ -1,29 +1,9 @@
 import React from 'react';
-import promoForm from './style.module.css';
-// import { NavLink } from 'react-router-dom';
+import promoForm from './promoForm.module.css';
 import MainForm from './../../../../common/collection-forms/main-form';
+import FeatureItem from './components';
 
-const PromoForm = (props) => {
-
-  const itemsData = [
-    { iconClass: "fas fa-american-sign-language-interpreting", title: "Официальный представитель.", description: "Все товары лучшие в своей ценовой категории. Официальные поставщики SHTENLI и PROFI в Беларуси." },
-    { iconClass: "fas fa-luggage-cart", title: "Доставка с любую точку Беларуси.", description: "Своя курьерская служба. Курьер заинтересован доставить товар в целосности." },
-    { iconClass: "fas fa-certificate", title: "Весь товар сертифицирован и имеет гарантию.", description: "Только официальные поставщики и производители товаров, такие как: Германия, Польша, Россия." },
-  ]
-
-  const FeatureItem = ({ iconClass, title, description }) => {
-    return (
-      <div className={promoForm.item}>
-        <div className={promoForm.icon}>
-          <i class={iconClass}></i>
-        </div>
-        <div className={promoForm.text}>
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
-      </div>
-    )
-  }
+const PromoForm = ({ itemsData }) => {
 
   return (
     <section className={promoForm.wrapper}>

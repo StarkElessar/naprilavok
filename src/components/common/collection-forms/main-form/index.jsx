@@ -1,5 +1,5 @@
 import React from 'react';
-import form from './style.module.css'
+import form from './form.module.css'
 
 const MainForm = (props) => {
   return (
