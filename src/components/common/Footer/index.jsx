@@ -4,17 +4,18 @@ import { NavLink } from 'react-router-dom';
 
 const MenuLink = ({ url, title }) => {
   return (
-    <li><NavLink to={url} activeClassName={styles.activeLink}>{title}</NavLink></li>
+    <li>
+      <NavLink to={url} activeClassName={styles.activeLink}>
+        {title}
+      </NavLink>
+    </li>
   );
 };
 
-const Footer = ({footer: {linkData}}) => {
-  
+const Footer = ({ linkData }) => {
   return (
     <footer className={styles.wrapper}>
-
       <div className={styles.row}>
-
         <div className={styles.col}>
           <h5>ИП Коробкин О.Е.</h5>
           <h5>УНП: 192693197</h5>
@@ -39,13 +40,9 @@ const Footer = ({footer: {linkData}}) => {
           <a href="mailto:feedback-mail@naprilavok.by">feedback-mail@naprilavok.by</a>
           <p className={styles.blockInfo__timetable}>Мы работаем с 8:30 до 23:00</p>
         </div>
-
       </div>
-
     </footer>
   );
-}
-
-
+};
 
 export default Footer;

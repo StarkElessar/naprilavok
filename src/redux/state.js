@@ -10,4 +10,6 @@ const state = {
       { url: "/showers", title: "Летние души" }
     ]
   }
-}
+};
+
+export default state;
