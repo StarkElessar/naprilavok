@@ -3,6 +3,23 @@ import footer from './style.module.css';
 import { NavLink } from 'react-router-dom';
 
 const Footer = (props) => {
+  
+  const MenuLink = ({ url, title }) => {
+    return (
+      <li><NavLink to={url} activeClassName={footer.activeLink}>{title}</NavLink></li>
+    );
+  };
+
+  const linkData = [
+    { url: "/catalog", title: "Главный каталог" },
+    { url: "/greenhouses", title: "Теплицы" },
+    { url: "/pavilion", title: "Беседки" },
+    { url: "/mowers", title: "Бензокосы" },
+    { url: "/chainsaw", title: "Бензопилы" },
+    { url: "/welding_machine", title: "Сварочные аппараты" },
+    { url: "/showers", title: "Летние души" }
+  ]
+  
   return (
     <footer className={footer.wrapper}>
 
@@ -36,23 +53,9 @@ const Footer = (props) => {
       </div>
 
     </footer>
-  )
-};
-
-const MenuLink = ({ url, title }) => {
-  return (
-    <li><NavLink to={url} activeClassName={footer.activeLink}>{title}</NavLink></li>
   );
-};
+}
 
-const linkData = [
-  { url: "/catalog", title: "Главный каталог" },
-  { url: "/greenhouses", title: "Теплицы" },
-  { url: "/pavilion", title: "Беседки" },
-  { url: "/mowers", title: "Бензокосы" },
-  { url: "/chainsaw", title: "Бензопилы" },
-  { url: "/welding_machine", title: "Сварочные аппараты" },
-  { url: "/showers", title: "Летние души" }
-]
+
 
 export default Footer;

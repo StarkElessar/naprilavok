@@ -11,6 +11,7 @@ import Chainsaw from './components/pages/Chainsaw';
 import WeldingMachine from './components/pages/WaldingMachine';
 import Showers from './components/pages/Showers';
 import PhoneLink from './components/common/miniPhone';
+import state from './redux/state';
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
         <Route exact path='/welding_machine' component={WeldingMachine} />
         <Route exact path='/showers' component={Showers} />
       </div>
-      <Footer />
+      <Footer state={state} />
       <PhoneLink />
     </BrowserRouter>
   );
