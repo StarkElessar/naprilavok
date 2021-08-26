@@ -56,3 +56,32 @@ form button:hover {
   color: #fff;
   letter-spacing: 0.05rem;
 }
+
+@media screen and (max-width: 375px) {
+  form {
+    max-width: 330px;
+  }
+  form h3 {
+    font-size: 1rem;
+  }
+  form p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  form {
+    max-width: 280px;
+    padding: 20px 25px;
+  }
+  form h3 {
+    font-size: 1rem;
+  }
+  form p {
+    font-size: 0.8rem;
+  }
+  form input,
+  form button {
+    width: 250px;
+  }
+}

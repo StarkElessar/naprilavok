@@ -17,8 +17,8 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
   z-index: 0;
 }
 
@@ -100,3 +100,47 @@
 .column:nth-child(2) {
   flex: 0 1 40%;
 }
+
+/* Адаптив */
+
+@media screen and (max-width: 1023px) {
+  
+  .title {
+    text-align: center;
+  }
+
+  .body {
+    flex-direction: column;
+  }
+
+  .column:nth-child(1) {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .item {
+    justify-content: center;
+  }
+
+  .column:nth-child(2) {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .title {
+    font-size: 2rem;
+    line-height: 95%;
+  }
+
+  .text h3 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+
+}  
