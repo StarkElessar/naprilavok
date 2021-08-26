@@ -1,14 +1,13 @@
 import React from 'react';
-import greenhousesPage from './style.module.css';
-// import { NavLink } from 'react-router-dom';
+import green from './green.module.css';
 
 const Greenhouses = (props) => {
   return (
-    <div>
-      <h1 className={greenhousesPage.title}>
+    <main className={green.wrapper}>
+      <h1 className={green.title}>
         Теплицы из поликарбоната
       </h1>
-    </div>
+    </main>
   );
 };
 
