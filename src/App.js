@@ -17,7 +17,7 @@ const App = ({ state }) => {
     <BrowserRouter>
       <Header />
       <div className="content__wrapper">
-        <Route exact path='/' component={ () => <Catalog cardData={state.сatalog.cardData} itemsData={state.сatalog.itemsData}/> } />
+        <Route exact path='/' component={ () => <Catalog cardData={state.Ясatalog.cardData} itemsData={state.Ясatalog.itemsData}/> } />
         <Route exact path='/catalog' component={ () => <Catalog cardData={state.сatalog.cardData} itemsData={state.сatalog.itemsData}/> } />
         <Route exact path='/greenhouses' component={Greenhouses} />
         <Route exact path='/pavilion' component={Pavilion} />
